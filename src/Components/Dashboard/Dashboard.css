@@ -1,0 +1,22 @@
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.container th,
+.container td {
+    border: 1px solid #686868;
+    padding: 10px;
+    text-align: left;
+    font-size: larger;
+}
+
+.container th {
+    background-color: #553f9a;
+    color: #fff;
+}
+
+.container tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
