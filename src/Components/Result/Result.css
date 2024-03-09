@@ -1,0 +1,27 @@
+.container button {
+    margin: auto;
+    width: 200px;
+    height: 54px;
+    background: #553f9a;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container input[type="text"] {
+    margin: auto;
+    width: 40%;
+    height: 40px;
+    padding: 8px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.container input[type="text"]:focus {
+    border-color: #553f9a;
+}

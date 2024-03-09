@@ -17,68 +17,12 @@
     background: #707070;
 }
 
-.container h2 {
-    margin: auto;
-    font-size: 35px;
-    font-weight: 500;
-}
-
-.container h1 {
-    font-size: 27px;
-    font-weight: 700;
-}
-
-.container ul li {
-    display: flex;
-    align-items: center;
-    height: 70px;
-    padding-left: 15px;
-    border: 1px solid #686868;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.container button {
-    margin: auto;
-    width: 200px;
-    height: 54px;
-    background: #553f9a;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
 .container .index {
     margin: auto;
     font-size: 18px;
 }
 
-.container .correct {
-    background: #dffff2;
-    border-color: #00d397;
-}
-
-.container .wrong {
-    background: #FFEBEB;
-    border-color: #FF4A4A;
-}
-
-.container input[type="text"] {
-    margin: auto;
-    width: 40%;
-    height: 40px;
-    padding: 8px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.container input[type="text"]:focus {
-    border-color: #553f9a;
+.container h1 {
+    font-size: 27px;
+    font-weight: 700;
 }
