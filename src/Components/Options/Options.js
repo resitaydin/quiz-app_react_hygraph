@@ -2,13 +2,23 @@
 import React from 'react';
 import './Options.css';
 
-const Options = ({ question, checkAns, optionRefs }) => {
+const Options = ({ question, checkAns, selectedOption, correctOption }) => {
+    const getClassName = (optionNumber) => {
+        if (optionNumber === selectedOption) {
+            return optionNumber === correctOption ? 'correct' : 'wrong';
+        }
+        if (optionNumber === correctOption) {
+            return 'correct';
+        }
+        return '';
+    };
+
     return (
         <ul>
-            <li ref={optionRefs[0]} onClick={(e) => checkAns(e, 1)}>{question.option1}</li>
-            <li ref={optionRefs[1]} onClick={(e) => checkAns(e, 2)}>{question.option2}</li>
-            <li ref={optionRefs[2]} onClick={(e) => checkAns(e, 3)}>{question.option3}</li>
-            <li ref={optionRefs[3]} onClick={(e) => checkAns(e, 4)}>{question.option4}</li>
+            <li className={getClassName(1)} onClick={() => checkAns(1)}>{question.option1}</li>
+            <li className={getClassName(2)} onClick={() => checkAns(2)}>{question.option2}</li>
+            <li className={getClassName(3)} onClick={() => checkAns(3)}>{question.option3}</li>
+            <li className={getClassName(4)} onClick={() => checkAns(4)}>{question.option4}</li>
         </ul>
     );
 }

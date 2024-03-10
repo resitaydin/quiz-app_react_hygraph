@@ -1,5 +1,5 @@
 // Quiz.jsx
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import './Quiz.css';
 import { data } from '../../assets/data';
@@ -15,11 +15,7 @@ export const Quiz = ({ onScoreSave, onQuizEnd }) => {
     let [correctCounter, setCorrectCounter] = useState(0);
     let [result, setResult] = useState(false);
     let [name, setName] = useState('');
-    let option1 = useRef(null);
-    let option2 = useRef(null);
-    let option3 = useRef(null);
-    let option4 = useRef(null);
-    let option_array = [option1, option2, option3, option4];
+
     const score = (correctCounter / data.length) * 100; // score out of 100
 
     const handleInputChange = (event) => {
@@ -27,17 +23,20 @@ export const Quiz = ({ onScoreSave, onQuizEnd }) => {
         console.log(name);
     };
 
-    const checkAns = (e, ans) => {
+    let [selectedOption, setSelectedOption] = useState(null);
+    let [correctOption, setCorrectOption] = useState(null);
+
+    const checkAns = (ans) => {
         if (lock === false) {
+            setSelectedOption(ans);
             if (question.ans === ans) {
-                e.target.classList.add("correct");
+                setCorrectOption(ans);
                 setLock(true);
                 setCorrectCounter(prev => prev + 1);
             }
             else {
-                e.target.classList.add("wrong");
                 setLock(true);
-                option_array[question.ans - 1].current.classList.add('correct');
+                setCorrectOption(question.ans);
             }
         }
     }
@@ -52,11 +51,8 @@ export const Quiz = ({ onScoreSave, onQuizEnd }) => {
             setIndex(++index);
             setQuestion(data[index]);
             setLock(false);
-            option_array.map((option) => {
-                option.current.classList.remove("wrong");
-                option.current.classList.remove("correct");
-                return null;
-            });
+            setSelectedOption(null); // reset selected option
+            setCorrectOption(null); // reset correct option
         }
     }
 
@@ -67,6 +63,8 @@ export const Quiz = ({ onScoreSave, onQuizEnd }) => {
         setLock(false);
         setResult(false);
         onQuizEnd(false);
+        setSelectedOption(null); // reset selected option
+        setCorrectOption(null); // reset correct option
     }
 
     async function save() {
@@ -98,7 +96,8 @@ export const Quiz = ({ onScoreSave, onQuizEnd }) => {
                     <Options
                         question={question}
                         checkAns={checkAns}
-                        optionRefs={option_array}
+                        selectedOption={selectedOption}
+                        correctOption={correctOption}
                     />
                     <button onClick={next}> Next </button>
                     <div className='index'> {index + 1} of {data.length} questions</div>

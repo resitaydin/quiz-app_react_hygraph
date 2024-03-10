@@ -1,8 +1,10 @@
-
+// Options.stories.js
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import Options from '../Components/Options/Options';
 import '../index.css'
+import '../Components/Options/Options.css';
+
 
 export default {
     title: 'Options',
@@ -13,6 +15,7 @@ const Template = (args) => <div className="container">
     <Options {...args} />
 </div>;
 
+// Defining a story for the Options component with default arguments
 export const Default = Template.bind({});
 Default.args = {
     question: {
@@ -22,5 +25,6 @@ Default.args = {
         option4: 'Option 4',
     },
     checkAns: action('Option clicked'),
-    optionRefs: [React.createRef(), React.createRef(), React.createRef(), React.createRef()],
+    selectedOption: null,
+    correctOption: null,
 };
