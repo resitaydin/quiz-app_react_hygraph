@@ -12,6 +12,12 @@
     font-size: larger;
 }
 
+.container hr {
+    height: 2px;
+    border: none;
+    background: #707070;
+}
+
 .container th {
     background-color: #553f9a;
     color: #fff;

@@ -9,8 +9,12 @@ function App() {
 
 
   const fetchScores = async () => {
-    const { userScores } = await graphcms.request(USER_SCORE_QUERY);
-    setScores(userScores);
+    try {
+      const { userScores } = await graphcms.request(USER_SCORE_QUERY);
+      setScores(userScores);
+    } catch (error) {
+      console.error('Error fetching scores:', error);
+    }
   };
 
   useEffect(() => {

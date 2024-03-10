@@ -1,4 +1,3 @@
-// Result.jsx
 import React from 'react';
 import './Result.css';
 
