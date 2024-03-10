@@ -6,11 +6,14 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "faker": "^6.6.6",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fakers": "^1.0.3-rc1",
     "react-scripts": "5.0.1",
+    "root": "github:libertyequalitydata/dynamic-data",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -19,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_b232484557f9bf8"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",

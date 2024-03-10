@@ -1,6 +1,9 @@
+// Question.stories.js
 import React from 'react';
 import Question from '../Components/Question/Question';
-import '../index.css'
+import '../index.css';
+
+import { faker } from '@faker-js/faker';
 
 export default {
     title: 'Question',
@@ -19,7 +22,7 @@ export const Default = Template.bind({});
 Default.args = {
     index: 0,
     question: {
-        question: 'What is the capital of France?',
+        question: faker.lorem.sentence(), // Generate a random sentence for the question
     },
     fontSize: 16,
 };

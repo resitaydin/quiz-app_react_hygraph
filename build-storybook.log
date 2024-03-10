@@ -1,15 +1,15 @@
 
 > quiz-app_react@0.1.0 build-storybook
-> storybook build --output-dir C:\Users\aydin\AppData\Local\Temp\chromatic--18568-0D6xSrooWcYV
+> storybook build --output-dir C:\Users\aydin\AppData\Local\Temp\chromatic--8092-hP1VrZMfq5M3
 
 @storybook/cli v7.6.17
 
-info => Cleaning outputDir: C:\Users\aydin\AppData\Local\Temp\chromatic--18568-0D6xSrooWcYV
+info => Cleaning outputDir: C:\Users\aydin\AppData\Local\Temp\chromatic--8092-hP1VrZMfq5M3
 info => Loading presets
 info => Building manager..
-info => Manager built (389 ms)
+info => Manager built (2.49 s)
 info => Building preview..
-info => Copying static files: C:\Users\aydin\OneDrive\Desktop\quiz-app_react\node_modules\@storybook\manager\static at C:\Users\aydin\AppData\Local\Temp\chromatic--18568-0D6xSrooWcYV\sb-common-assets
+info => Copying static files: C:\Users\aydin\OneDrive\Desktop\quiz-app_react\node_modules\@storybook\manager\static at C:\Users\aydin\AppData\Local\Temp\chromatic--8092-hP1VrZMfq5M3\sb-common-assets
 WARN No story files found for the specified pattern: src\**\*.mdx
 info Using SWC compiler
 info Addon-docs: using MDX2
@@ -17,7 +17,7 @@ info => Loading Webpack configuration from `node_modules\react-scripts`
 info => Removing existing JavaScript and TypeScript rules.
 info => Modifying Create React App rules.
 info => Using default Webpack5 setup
-info => Copying static files: C:\Users\aydin\OneDrive\Desktop\quiz-app_react\public at C:\Users\aydin\AppData\Local\Temp\chromatic--18568-0D6xSrooWcYV\
+info => Copying static files: C:\Users\aydin\OneDrive\Desktop\quiz-app_react\public at C:\Users\aydin\AppData\Local\Temp\chromatic--8092-hP1VrZMfq5M3\
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
 WARN Assets: 
@@ -27,9 +27,9 @@ WARN   912.f0ed016e.iframe.bundle.js (720 KiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
 WARN   main (972 KiB)
-WARN       runtime~main.ef76311a.iframe.bundle.js
+WARN       runtime~main.8dd06f89.iframe.bundle.js
 WARN       788.46331a21.iframe.bundle.js
 WARN       main.30e488d5.iframe.bundle.js
 WARN 
-info => Preview built (16 s)
-info => Output directory: C:\Users\aydin\AppData\Local\Temp\chromatic--18568-0D6xSrooWcYV
+info => Preview built (17 s)
+info => Output directory: C:\Users\aydin\AppData\Local\Temp\chromatic--8092-hP1VrZMfq5M3
